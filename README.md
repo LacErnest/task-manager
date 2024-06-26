@@ -11,12 +11,12 @@ Here's an improved version of your readme:
     ```
 
 
-3. Create a copy of `.env` file:
+2. Create a copy of `.env` file:
     ```sh
     cp .env.example .env
     ```
 
-4. Update the `.env` file to use MySQL with the following configuration (according to your credentials):
+3. Update the `.env` file to use MySQL with the following configuration (according to your credentials):
     ```ini
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -40,8 +40,13 @@ Here's an improved version of your readme:
     ```sh
     php artisan serve
     ```
+    
+8. You can lauch tests:
+    ```sh
+    php artisan test
+    ```
 
-8. Access the application at `http://localhost:8000`.
+9. Access the application at `http://localhost:8000`.
 
 ## Features
 

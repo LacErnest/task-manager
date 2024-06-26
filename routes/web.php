@@ -26,7 +26,7 @@ Route::prefix('project')->group(function () {
     Route::get('/index',[ProjectController::class, 'index']);
     Route::get('/create',[ProjectController::class, 'create']);
     Route::get('/show/{id}',[ProjectController::class, 'show'])->name('show-project');
-    Route::get('/list-project-tasks',[ProjectController::class, 'listProjectTasks'])->name('listProjectTasks');
+    Route::get('/list-project-tasks',[ProjectController::class, 'listProjectTasks']);
 
     Route::delete('/task/{id}/delete',[TaskController::class, 'destroy']);
     Route::get('{projectId}/task/{id}/edit',[TaskController::class, 'edit']);

@@ -36,7 +36,8 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = $this->projectService->getProjectById($id);
-        return view('project.show', compact('project'));
+        $projects = $this->projectService->getAllProjects();
+        return view('project.show', compact('project', 'projects'));
     }
 
     public function reorderTasks($projectId, Request $request)

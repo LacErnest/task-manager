@@ -1,3 +1,5 @@
+Here's an improved version of your readme:
+
 # Task Manager
 
 ## Installation
@@ -8,44 +10,38 @@
     cd task-manager
     ```
 
-2. Install dependencies:
-    ```sh
-    composer install
-    npm install && npm run dev
-    ```
 
 3. Create a copy of `.env` file:
     ```sh
     cp .env.example .env
     ```
 
-4. Update the `.env` file to use SQLite:
+4. Update the `.env` file to use MySQL with the following configuration (according to your credentials):
     ```ini
-    DB_CONNECTION=sqlite
-    DB_DATABASE=./task.sqlite
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=task-manager
+    DB_USERNAME=root
+    DB_PASSWORD=root
     ```
 
-5. Create the SQLite database file:
-    ```sh
-    touch task.sqlite
-    ```
-
-6. Generate application key:
+5. Generate application key:
     ```sh
     php artisan key:generate
     ```
 
-7. Run the migrations:
+6. Run the migrations and seed the database:
     ```sh
-    php artisan migrate
+    php artisan migrate --seed
     ```
 
-8. Serve the application:
+7. Serve the application:
     ```sh
     php artisan serve
     ```
 
-9. Access the application at `http://localhost:8000`.
+8. Access the application at `http://localhost:8000`.
 
 ## Features
 

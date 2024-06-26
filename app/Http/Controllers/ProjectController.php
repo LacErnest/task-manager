@@ -48,8 +48,7 @@ class ProjectController extends Controller
     {
         $project = $this->projectService->getProjectWithTasks($request->get('selectedProjectId'));
         return view('project.show', [
-            'project' => $project,
-            'priorities' => TaskConstants::getAllPriorities(),
+            'project' => $project
         ]);
     }
 }
